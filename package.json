@@ -1,11 +1,18 @@
 {
   "name": "literate-octo-spoon",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "type": "module",
+  "version": "1.0.2",
+  "description": "A TypeScript implementation of Huffman encoding",
+  "files": ["src", "dist", "esm"],
+  "main": "dist/index.js",
+  "module": "esm/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rimraf dist esm",
+    "prebuild": "npm run clean",
+    "build:cjs": "tsc --module commonjs --outDir dist",
+    "build:esm": "tsc --target es2018 --outDir esm",
+    "build": "npm run build:esm && npm run build:cjs",
+    "postbuild": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -20,6 +27,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
     "ts-jest": "^29.3.4",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",

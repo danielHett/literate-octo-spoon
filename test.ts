@@ -1,5 +1,5 @@
-import { encode, decode } from "./index";
-import { writeFileSync, readFileSync } from 'node:fs';
+import { encode, decode } from "./src/index";
+import { readFileSync } from 'node:fs';
 import * as path from 'path';
 
 interface result {
