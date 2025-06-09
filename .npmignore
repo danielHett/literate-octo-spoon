@@ -1,6 +1,5 @@
 test_files
 test.ts
-README.md
 huffman-encoding.pdf
 .gitingore
 node_modules
