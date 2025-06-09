@@ -1,6 +1,6 @@
 {
   "name": "literate-octo-spoon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A TypeScript implementation of Huffman encoding",
   "files": ["src", "dist", "esm"],
   "main": "dist/index.js",
